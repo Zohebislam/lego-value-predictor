@@ -1,0 +1,55 @@
+{
+  "features": [
+    "log_pieces",
+    "log_rrp",
+    "price_per_piece",
+    "minifigs",
+    "minifigs_per_100_pieces",
+    "is_licensed",
+    "size_group",
+    "years_held",
+    "theme_grouped"
+  ],
+  "numeric": [
+    "log_pieces",
+    "log_rrp",
+    "price_per_piece",
+    "minifigs",
+    "minifigs_per_100_pieces",
+    "is_licensed",
+    "size_group",
+    "years_held"
+  ],
+  "model": "gradient_boosting",
+  "years_held_range": [
+    3.4500000000000455,
+    20.450000000000045
+  ],
+  "themes": [
+    "Advanced models",
+    "Agents",
+    "Architecture",
+    "Atlantis",
+    "Batman",
+    "Bionicle",
+    "Cars",
+    "Castle",
+    "City",
+    "Creator",
+    "Friends",
+    "Harry Potter",
+    "Hero factory",
+    "Indiana Jones",
+    "Lord of the Rings",
+    "Ninjago",
+    "Other",
+    "Pirates",
+    "Seasonal",
+    "Space",
+    "Star Wars",
+    "Super Heroes",
+    "Technic",
+    "Trains"
+  ],
+  "error_pct_points": 8.68
+}

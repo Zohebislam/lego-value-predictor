@@ -7,7 +7,7 @@ available on release day: theme, piece count, retail price, minifigures, and whe
 licensed franchise. It's trained on eBay resale prices for 1,800+ sets from a dataset published
 alongside peer-reviewed research on LEGO as an alternative investment.
 
-**Live app:** https://lego-value-predictor.streamlit.app/
+**Live app:** https://lego-value-predictor-aymogxuhjfo59dhzhmhsid.streamlit.app/
 
 ## Key results
 The real test: the model was trained only on sets released through 2012, then used to predict

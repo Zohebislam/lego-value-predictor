@@ -7,7 +7,24 @@ import pandas as pd
 import streamlit as st
 
 st.set_page_config(page_title="LEGO Set Value Predictor", page_icon="🧱", layout="centered")
-model = joblib.load("models/model.joblib")
+import sys
+sys.path.insert(0, "src")
+import train
+
+
+@st.cache_resource
+def load_model():
+    # Train the model when the app starts (a few seconds), so it always matches
+    # the server's library versions. Same data and settings as train.py.
+    df = pd.read_csv("data/processed/lego_model_data.csv")
+    old = df[(df["release_year"] <= 2009) & df["cagr_2015"].notna()]
+    mid = df[df["release_year"].between(2010, 2012) & df["cagr_2015"].notna()]
+    known = pd.concat([train.trim(old, "cagr_2015"), train.trim(mid, "cagr_2015")])
+    known = known.assign(years_held=known["years_to_2015"])
+    return train.make_gbm().fit(known[train.FEATURES], known["cagr_2015"])
+
+
+model = load_model()
 meta = json.loads(Path("models/metadata.json").read_text())
 data = pd.read_csv("data/processed/lego_model_data.csv")
 ERR = meta["error_pct_points"] / 100

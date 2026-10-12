@@ -8,6 +8,7 @@ licensed franchise. It's trained on eBay resale prices for 1,800+ sets from a da
 alongside peer-reviewed research on LEGO as an alternative investment.
 
 **Live app:** https://lego-value-predictor-aymogxuhjfo59dhzhmhsid.streamlit.app/
+If the app is asleep, click "Yes, get this app back up!" and give it about a minute.
 
 ## Key results
 The real test: the model was trained only on sets released through 2012, then used to predict
